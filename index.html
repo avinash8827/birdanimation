@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>bird animation</title>
+        <style>
+            .birdanimation{
+                position: relative;
+                animation-name: birdcont;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-play-state: running;
+                position: relative;
+            }
+            @keyframes birdcont {
+                0%{
+                    left:0%;
+                }
+                100%{
+                    left: 100%;
+                }
+            }
+            
+            .bird{
+                width: 140px;
+                height: 150px;
+                background-image: url("./img/1.1.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                animation-name: fly;
+                animation-duration: 0.3s;
+                animation-iteration-count: infinite;
+                animation-timing-function: steps(3);
+                transform: rotateZ(45deg);
+               
+            }
+            @keyframes fly {
+                0%{
+                    background-position: 0px 0px;
+                }
+                100%{
+                    background-position: -460px 0px;
+                }
+            }
+            
+        </style>
+    </head>
+    <body> 
+        <div class="birdanimation">
+            <div class="bird"></div>
+            <div class="bird2"></div>
+        </div> 
+        
+    </body>
+</html>
